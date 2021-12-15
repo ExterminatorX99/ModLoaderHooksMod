@@ -1,0 +1,7 @@
+displayName = ModLoader Hooks
+author = Exterminator
+version = 0.1
+homepage = https://github.com/ExterminatorX99/XXXXXXXXXXXXXXXXXXXXX
+includeSource = true
+buildIgnore = HookGen/*
+dllReferences = ModLoaderHooks
