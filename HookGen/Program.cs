@@ -12,16 +12,17 @@ public static class Program
 
 	public static void Main(string[] args)
 	{
-		const string outputPath = "ModLoaderHooks.dll";
-		if (File.Exists(outputPath))
-			File.Delete(outputPath);
+		const string outputDll = "ModLoaderHooks.dll";
+		const string destFolder = "../../../../lib";
+		const string destFullPath = $"{destFolder}/{outputDll}";
 
-		HookGen(tmlAssemblyPath, outputPath);
+		if (File.Exists(outputDll))
+			File.Delete(outputDll);
 
-		//File.Delete(Path.ChangeExtension(outputPath, "pdb"));
+		HookGen(tmlAssemblyPath, outputDll);
 
-		Directory.CreateDirectory("../../../../lib/");
-		File.Copy(outputPath, $"../../../../lib/{outputPath}");
+		Directory.CreateDirectory(destFolder);
+		File.Copy(outputDll, destFullPath, true);
 	}
 
 	private static void HookGen(string inputPath, string outputPath)
