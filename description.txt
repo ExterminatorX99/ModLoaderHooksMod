@@ -2,8 +2,7 @@ Adds ModLoader hooks for IL editing and On detouring
 
 To use these hooks, download the mod, extract it and copy the lib folder into your mod.
 
-Once you've done that, paste the following into your csproj:
-
+Once you've done that, paste the following into your csproj file:
 
 
 <ItemGroup>
@@ -11,3 +10,9 @@ Once you've done that, paste the following into your csproj:
     <HintPath>lib\ModLoaderHooks.dll</HintPath>
   </Reference>
 </ItemGroup>
+
+
+After that, add the following to your build.txt file:
+
+
+modReferences = ModLoaderHooksMod
