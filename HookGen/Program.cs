@@ -7,7 +7,7 @@ namespace HookGen;
 public static class Program
 {
 	private const string installedNetRefs = @"\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.0\ref\net6.0";
-	private const string tmlAssemblyPath = @"E:\Games\Steam\steamapps\common\tModLoader\tModLoader.dll"; // hardcode
+	private const string tmlAssemblyPath = @"E:\Games\Steam\steamapps\common\tModLoaderDev\tModLoader.dll"; // hardcode
 	private static readonly string binLibsPath = $"{Directory.GetParent(tmlAssemblyPath)}/Libraries";
 
 	public static void Main(string[] args)
